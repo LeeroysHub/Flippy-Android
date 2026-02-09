@@ -22,10 +22,10 @@ object ApkConfig {
     val Project.COUNTLY_URL
         get() = prop("countly_url", "")
     val Project.COUNTLY_APP_KEY
-        get() = prop("countly_app_key", "171c41398e2459b068869d6409047680896ed062")
+        get() = prop("countly_app_key", "")
 
     val Project.IS_GOOGLE_FEATURE_AVAILABLE
-        get() = prop("is_google_feature", true).toBoolean()
+        get() = prop("is_google_feature", false).toBoolean()
 
     val Project.IS_SENTRY_PUBLISH
         get() = prop("is_sentry_publish", false).toBoolean()
@@ -43,10 +43,10 @@ object ApkConfig {
         }
 
     val Project.IS_METRIC_ENABLED
-        get() = prop("is_metric_enabled", true).toBoolean()
+        get() = prop("is_metric_enabled", false).toBoolean()
 
     val Project.IS_SENTRY_ENABLED
-        get() = prop("is_metric_enabled", true).toBoolean()
+        get() = prop("is_metric_enabled", false).toBoolean()
 
     val Project.CURRENT_FLAVOR_TYPE: FlavorType
         get() {
