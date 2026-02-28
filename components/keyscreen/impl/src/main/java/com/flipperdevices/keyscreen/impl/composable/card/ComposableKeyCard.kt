@@ -20,7 +20,7 @@ import com.flipperdevices.core.ui.theme.LocalPallet
 import com.flipperdevices.core.ui.theme.LocalTypography
 import com.flipperdevices.keyparser.api.model.FlipperKeyParsed
 import com.flipperdevices.keyscreen.impl.R
-import com.flipperdevices.keyscreen.impl.composable.actions.ComposableFavorite
+//import com.flipperdevices.keyscreen.impl.composable.actions.ComposableFavorite
 import com.flipperdevices.keyscreen.model.DeleteState
 import com.flipperdevices.keyscreen.model.FavoriteState
 import com.flipperdevices.keyscreen.shared.ComposableKeyContent
@@ -62,11 +62,11 @@ fun ComposableKeyCard(
                         favoriteState != null &&
                         onSwitchFavorites != null
                     ) {
-                        ComposableFavorite(
+                        /*ComposableFavorite(
                             favoriteState,
                             Modifier.padding(horizontal = 12.dp),
                             onSwitchFavorites
-                        )
+                        )*/
                     }
                     if (synchronizationState != null) {
                         synchronizationState()
