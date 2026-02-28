@@ -58,16 +58,16 @@ fun ComposableKeyCard(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.End
                 ) {
-                    if (deleteState == DeleteState.NOT_DELETED &&
+                    /*if (deleteState == DeleteState.NOT_DELETED &&
                         favoriteState != null &&
                         onSwitchFavorites != null
                     ) {
-                        /*ComposableFavorite(
+                        ComposableFavorite(
                             favoriteState,
                             Modifier.padding(horizontal = 12.dp),
                             onSwitchFavorites
-                        )*/
-                    }
+                        )
+                    }*/
                     if (synchronizationState != null) {
                         synchronizationState()
                     }
