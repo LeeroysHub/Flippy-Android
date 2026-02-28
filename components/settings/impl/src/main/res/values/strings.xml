@@ -54,7 +54,7 @@
     <string name="version_name_app">Flipper Mobile App</string>
     <string name="version">Version</string>
 
-    <string name="check_updates_text">Flipper Mobile App</string>
+    <string name="check_updates_text">Flippy</string>
     <string name="check_updates_desc">Version from %1$s: %2$s</string>
     <string name="check_updates_button">Check Updates</string>
     <string name="check_no_updates_button">Got It</string>

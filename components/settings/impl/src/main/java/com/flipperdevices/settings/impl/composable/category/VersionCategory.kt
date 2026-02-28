@@ -67,7 +67,7 @@ internal fun VersionCategory(
             SimpleElement(
                 modifier = Modifier.weight(weight = 1f),
                 title = stringResource(id = R.string.check_updates_text),
-                description = stringResource(id = R.string.check_updates_desc, sourceInstall, version),
+                description = stringResource(id = R.string.check_updates_desc, "Leeroy", version),
                 titleTextStyle = LocalTypography.current.bodyR14
             )
 
@@ -75,7 +75,7 @@ internal fun VersionCategory(
                 return@CardCategory
             }
 
-            if (inProgress) {
+            /*if (inProgress) {
                 CircularProgressIndicator(
                     modifier = Modifier.size(size = 20.dp),
                     strokeWidth = 2.dp,
@@ -89,7 +89,7 @@ internal fun VersionCategory(
                     style = LocalTypography.current.subtitleM12,
                     color = LocalPallet.current.accentSecond
                 )
-            }
+            }*/
         }
     }
 }
