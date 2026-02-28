@@ -31,12 +31,12 @@ class FavoriteSynchronizationImpl @Inject constructor(
     override val TAG = "FavoriteSynchronization"
 
     override suspend fun syncFavorites(progressTracker: DetailedProgressWrapperTracker) {
-        val favoritesFromFlipper = favoritesRepository.getFavorites(flipperStorage)
+        //val favoritesFromFlipper = favoritesRepository.getFavorites(flipperStorage)
         progressTracker.onProgress(
             current = 0.5f,
             detail = FavoriteSynchronization.FavoritesProgressDetail
         )
-        val favoritesFromAndroid = favoriteApi.getFavorites().map { it.path }
+        /*val favoritesFromAndroid = favoriteApi.getFavorites().map { it.path }
         val diffWithManifestAndFlipper = manifestRepository
             .compareFlipperFavoritesWithManifest(favoritesFromFlipper)
         val diffWithManifestAndAndroid = manifestRepository
@@ -80,7 +80,7 @@ class FavoriteSynchronizationImpl @Inject constructor(
         manifestRepository.updateManifest(
             favorites = favoritesOnAndroid.map { it.path },
             favoritesOnFlipper = newFavoritesOnFlipper
-        )
+        )*/
         progressTracker.onProgress(
             current = 1f,
             detail = FavoriteSynchronization.FavoritesProgressDetail
