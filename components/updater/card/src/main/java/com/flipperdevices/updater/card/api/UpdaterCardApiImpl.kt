@@ -33,32 +33,6 @@ class UpdaterCardApiImpl @Inject constructor(
         requestRefresh: Boolean,
         onRefreshRequestExecute: () -> Unit
     ) {
-        val updateStateViewModel: UpdateStateViewModel = componentContext.viewModelWithFactory(key = null) {
-            updateStateViewModelProvider.get()
-        }
-        val updateCardViewModel: UpdateCardViewModel = componentContext.viewModelWithFactory(
-            key = deeplink?.toString()
-            ) {
-                updateCardFactory(deeplink)
-            }
-        val updateRequestViewModel: UpdateRequestViewModel =
-            componentContext.viewModelWithFactory(key = null) {
-                updateRequestViewModelProvider.get()
-            }
-
-        LaunchedEffect(requestRefresh, onRefreshRequestExecute) {
-                if (requestRefresh) {
-                    updateCardViewModel.refresh()
-                    onRefreshRequestExecute()
-                }
-        }
-
-        ComposableUpdaterCardInternal(
-                modifier = modifier,
-                onStartUpdateRequest = onStartUpdateRequest,
-                updateStateViewModel = updateStateViewModel,
-                updateCardViewModel = updateCardViewModel,
-                updateRequestViewModel = updateRequestViewModel
-        )
+        //Do nothing
     }
 }
